@@ -12,3 +12,13 @@ def product_array(numbers):
     return prod_number
 
 product_array(numbers)
+
+
+# Simple multiplication
+def simple_multiplication(number):
+    """
+    This kata is about multiplying a given number by eight if it is an even number and by nine otherwise
+    Args: integer
+    return: integer
+    """
+    return number * 8 if number % 2 == 0 else number * 9
