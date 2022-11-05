@@ -19,5 +19,18 @@ test.assert_equals(get_chance(25, 5, 5), 0.29)
 test.assert_equals(get_chance(9, 3, 2), 0.42)
 """
 
-def get_chance(n, x, a):
-    return 1-((x/n)*a)
+def get_chance_loo(n, x, a):
+    prob_sum = x/n
+    print(f"The first probability is {prob_sum}")
+    # sum the probabilities a times
+    for i in range(a):
+        a -= 1
+        if a > 0:
+            # the cumulative probability
+            prob_sum += prob_sum
+        print(prob_sum)
+        print(a)
+    return print(1-prob_sum)
+
+
+get_chance_loo(4, 1, 3)
