@@ -20,17 +20,17 @@ test.assert_equals(get_chance(9, 3, 2), 0.42)
 """
 
 def get_chance_loo(n, x, a):
-    prob_sum = x/n
-    print(f"The first probability is {prob_sum}")
+    prob = 1.0
     # sum the probabilities a times
     for i in range(a):
-        a -= 1
-        if a > 0:
-            # the cumulative probability
-            prob_sum += prob_sum
-        print(prob_sum)
-        print(a)
-    return print(1-prob_sum)
+        """
+        This will calculate the probability of not goint to the loo
+        n - x - i: 
+            From all dring we will remove all "infected"
+            And (-i) 
+        """
+        prob *= (n - x - i)/(n - i)
+    return print(round(prob, 2))
 
 
-get_chance_loo(4, 1, 3)
+get_chance_loo(9, 3, 2)
