@@ -27,7 +27,8 @@ def get_chance_loo(n, x, a):
         This will calculate the probability of not goint to the loo
         n - x - i: 
             From all dring we will remove all "infected"
-            And (-i) 
+            And (n-i): how much drinks are left
+            All probabilities will be multiplied (*=)
         """
         prob *= (n - x - i)/(n - i)
     return print(round(prob, 2))
