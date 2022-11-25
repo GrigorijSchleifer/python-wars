@@ -1,30 +1,27 @@
-import numpy as np
+# https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/train/python
 
-def row_sum_odd_numbers(n):
-    number = 0
-    len_arr = 1
-    arr_outer = []
-    arr_inner = []
-    for arr in arr_outer:
-        number += 1
-        if number % 2 == 1:
-            arr_outer.append(arr_inner.extend(number))
-            len_arr += 1 
-    print(arr_outer)
-
-row_sum_odd_numbers(10)
-
-number = 0
-len_arr = 1
 arr_outer = []
 arr_inner = []
-for i in range(10):
-    number += 1
-    if number % 2 != 1 and i < 10:
-        arr_outer.append(arr_inner.extend(number))
-        len_arr += 1 
-    print(arr_outer)
+
+'''
+Every line should have increasing length by one
+Fill line with odd numbers until length is one longer than the line before
+Insert this filled list on next location
+'''
+
+number = 1
 
 for i in range(10):
-    arr_inner.extend(i)
-    print(i)
+    print(f'i is {i}')
+    if number % 2 > 0:
+        print(f'number is {number}')
+        arr_inner.append(number) 
+        print(f'arr_inner is {arr_inner} and its length is {len(arr_inner)}')
+        if len(arr_inner) == i + 1:
+            arr_outer.insert(i, arr_inner)
+            arr_inner = []
+            print(f'arr_outer is {arr_outer}')
+    number += 1
+    
+
+print(arr_outer)
