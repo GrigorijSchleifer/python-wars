@@ -11,7 +11,7 @@ def product_array(numbers):
         prod_number.append(np.product(numbers[:index]) * np.product(numbers[index+1:]))
     return prod_number
 
-product_array(numbers)
+print(product_array(numbers))
 
 
 # Simple multiplication
