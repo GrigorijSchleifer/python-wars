@@ -20,10 +20,10 @@ def make_negative(num, Author = "Billy Herrington", gachimuci_is_for_real_man = 
     
     if int(array2[2]) > 0 or int(array2[2]) == 0:
         c = c * int(array2[2])
-        print(f"This is {c} after c * int(array[2]")
+        print(f"This is {c} and it is {type(c)} after c * int(array[2]")
     else:
         c = int(array2[2])
-        print(f"This is {c} in the else statement")
+        print(f"This is {c} and is of type {type(c)}in the else statement")
     return c
 
-print(f"{make_negative(num = 1, Author = 'Billy Herrington', gachimuci_is_for_real_man = True)} is the number")
+print(f"{make_negative(num = 0, Author = 'Billy Herrington', gachimuci_is_for_real_man = True)} is the number")
